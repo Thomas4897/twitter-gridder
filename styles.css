@@ -2,33 +2,32 @@
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	margin: 0px;
-	padding: 0px;
+	padding: 3px 0px 0px 3px;
 }
 
 body {
-	border: 3px solid black;
 	background-color: white;
-	width: 405px;
 }
 
-#page {
+.page {
 	height: 1000px;
-	width: 100px;
 	display: grid;
-	grid-template-columns: ;
-	grid-template-rows: 30%;
+	grid-template-rows: 15.2% 24% 18%;
 	grid-template-areas:
 		"header"
+		"page-info"
+		"tweet"
 		"footer";
 }
 
-#header {
+.header {
 	grid-area: header;
-	height: 200px;
-	width: 812px;
+	height: 150px;
+	width: 390px;
+	border-top: 2px solid rgb(231, 235, 238);
 	display: grid;
-	grid-template-columns: 8% 8.7%;
-	grid-template-rows: 13% 12%;
+	grid-template-columns: 18% 17.7% 56%;
+	grid-template-rows: 16% 16%;
 	grid-template-areas:
 		"arrow page-title verified"
 		"arrow num-tweets num-tweets"
@@ -43,7 +42,7 @@ body {
 #verified {
 	grid-area: verified;
 	height: 20px;
-	padding-top: 5px;
+	padding-top: 6px;
 }
 
 #page-title {
@@ -60,35 +59,166 @@ body {
 
 #header-pic {
 	grid-area: header-pic;
-	height: 105px;
-	max-width: 405px;
+	height: px;
+	max-width: 385px;
 }
 
-#footer {
-	width: 400px;
+#page-info {
+	height: 150px;
+	width: 390px;
+	grid-area: page-info;
+	display: grid;
+	grid-template-columns: 60% 13%;
+	grid-template-rows: 35% 20% 20% 28% 30%;
+	grid-template-areas:
+		"avatar-pic dots-pic follow-btn"
+		"page-info-title verified-page-info verified-page-info"
+		"page-at-title page-at-title page-at-title"
+		"page-info-txt page-info-txt page-info-txt"
+		"follow-info follow-info follow-info"
+		"page-info-links page-info-links page-info-links";
+}
+
+#avatar-pic {
+	grid-area: avatar-pic;
+	height: 50px;
+	border-radius: 30px;
+	margin-left: 30px;
+}
+
+#dots-pic {
+	grid-area: dots-pic;
+	height: 5px;
+	padding: 15px 10px 15px 10px;
+	border: 1px solid rgb(29, 161, 242);
+	border-radius: 22px;
+	margin-top: 10px;
+}
+
+#follow-btn {
+	grid-area: follow-btn;
+	width: 80px;
+	height: 40px;
+	padding-bottom: 5px;
+	border-radius: 20px;
+	border: 1px solid rgb(29, 161, 242);
+	color: rgb(29, 161, 242);
+	font-weight: bold;
+	font-size: 15px;
+	background-color: white;
+	margin-top: 10px;
+}
+
+#page-info-title {
+	grid-area: page-info-title;
+	margin-top: 2px;
+	margin-left: 14px;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+#verified-page-info {
+	grid-area: verified-page-info;
+	height: 20px;
+	padding-top: 10px;
+	margin-left: -96%;
+}
+
+#page-at-title {
+	grid-area: page-at-title;
+	font-size: 15px;
+	margin-left: 10px;
+	color: rgb(92, 111, 131);
+}
+
+#page-info-txt {
+	grid-area: page-info-txt;
+	font-size: 15px;
+	margin-left: 10px;
+	margin-right: 30px;
+}
+
+#follow-info {
+	grid-area: follow-info;
+	font-size: 15px;
+	margin-left: 6px;
+	margin-right: 30px;
+	padding-top: 10px;
+	display: flex;
+}
+
+#counts {
+	font-weight: bold;
+}
+
+#follow-txt {
+	padding-right: 17px;
+	color: rgb(92, 111, 131);
+}
+
+#page-info-links {
+	grid-area: page-info-links;
+	color: rgb(92, 111, 131);
+	font-size: 15px;
+	font-weight: bold;
+	display: flex;
+}
+
+#tweets {
+	margin-left: -5px;
+	padding-bottom: 19px;
+	border-bottom: 2px solid rgb(29, 161, 242);
+	width: 100px;
+	display: flex;
+	justify-content: center;
+}
+
+#tweets-replies {
+	margin-right: px;
+}
+
+#tweets-media {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.tweet {
+	grid-area: tweet;
+	max-width: 385px;
+	margin-left: -2px;
+}
+
+.footer {
+	width: 390px;
 	grid-area: footer;
-	border-top: 1px solid rgb(103, 121, 140);
 }
 
 #footer-icons {
 	padding-top: 20px;
 	padding-left: 31px;
 	display: grid;
+	grid-template-areas: "home-icon search-icon bell-icon mail-icon";
+	border-top: 1px solid rgb(228, 231, 235);
+	border-bottom: 1px solid rgb(228, 231, 235);
+	padding: 10px 0px 10px 30px;
 }
 
 #home-icon {
 	height: 20px;
+	display: home-icon;
 }
 
 #search-icon {
 	height: 20px;
-	width: ;
+	display: search-icon;
 }
 #bell-icon {
 	height: 20px;
+	display: bell-icon;
 }
 
 #mail-icon {
 	height: 19px;
-	width: 18px;
+	width: 20px;
+	display: mail-icon;
 }
